@@ -18,7 +18,7 @@
 
   <div class="container">
     <%= form_tag homepage_index_path, method: :post do %>
-      <%= text_area_tag 'comment', nil %>
+      <%= text_area_tag 'comment', nil %> <!-- Ne pas oublier de spécifier la colone: comment[content] -->
       <%= submit_tag "Save", class: 'btn btn-primary'%>
     <% end %>
 
@@ -28,6 +28,7 @@
           <%= comment.content %>
         </li>
       <% end %>
+      <!-- Il manque des feature... -->
     </ul>
 </div>
 
